@@ -325,6 +325,60 @@ ul {
 }
 
 /*portfolio page style*/
+.projects {
+  background-color: var(--bg-color);
+  padding: 32px 0;
+  margin-top: 2rem;
+}
+
+.project-pic {
+  width: 65%;
+  height: 60%;
+}
+
+.projects-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.projects-title {
+  font-size: 40px;
+  text-align: left;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+  margin-left: 70px;
+}
+
+.project-container {
+  text-align: center;
+  width: 21.875rem;
+  padding: 1rem;
+}
+
+.project-container p {
+  padding: 0.4rem;
+}
+
+.project-title {
+  margin-bottom: var(--bottom-margin);
+}
+
+.project-details {
+  margin-bottom: var(--bottom-margin);
+}
+
+.project-card {
+  transition: 0.4s;
+  transition: transform 0.2s;
+}
+
+.project-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+}
+
 /* Float four columns side by side */
 .column {
   float: left;
@@ -543,6 +597,14 @@ hr {
   border-color: rgba(255, 255, 255, 0.6);
 }
 
+.project-card {
+  background-color: #fff;
+  border-radius: 11px;
+  box-shadow: 0 3px 10px var(--primary-shadow);
+  padding: 20px;
+  margin: 10px;
+}
+
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
   .columnform,
@@ -621,9 +683,30 @@ hr {
     height: 5.25rem;
   }
 
+  .information {
+    margin-top: 1rem;
+    padding: 1rem 3.5rem;
+  }
+
+  .information h4 {
+    text-align: center;
+  }
+
+  .information p {
+    text-align: justify;
+  }
+
   .header-text {
     text-align: center;
     padding: 40px;
+  }
+
+  .projects-container {
+    flex-direction: column;
+  }
+
+  .project-container {
+    width: 20.875rem;
   }
 }
 
@@ -631,21 +714,10 @@ hr {
 
 @media (max-width: 768px) {
   .contenta {
-    flex-direction: row; /* Stacks items vertically on smaller screens */
+    flex-direction: column; /* Stacks items vertically on smaller screens */
     justify-content: center;
     text-align: center;
-    padding: 80px;
-  }
-
-  .information {
-    padding: 80px;
-
-    height: 150%;
-    text-align: center;
-  }
-
-  .information.p {
-    font-size: 10pt;
+    padding: 50px;
   }
 
   .image img {
@@ -682,5 +754,20 @@ hr {
 
   .footer-nav a {
     margin: 5px 0;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .hero img {
+    height: 37.5rem;
+    width: 23rem;
+  }
+
+  .bio {
+    width: 18.3rem;
+  }
+
+  .project-container {
+    width: 17.875rem;
   }
 }
