@@ -238,6 +238,7 @@ h2::after {
   text-align: justify;
   margin-bottom: 50px;
   margin-top: -3px;
+  box-sizing: border-box;
 }
 
 .contenta {
@@ -718,6 +719,7 @@ hr {
     justify-content: center;
     text-align: center;
     padding: 50px;
+    max-width: 100%;
   }
 
   .image img {
