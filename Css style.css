@@ -220,7 +220,56 @@ h2::after {
   }
 }
 
-.About {
+/* About section*/
+
+#about {
+  border-radius: 9px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  color: black;
+  padding-top: 5px;
+
+  margin: 50px auto;
+  max-width: 1200px;
+}
+
+#about .content {
+  text-align: center; /* Center align the content */
+}
+
+#about .text,
+#about .image {
+  display: inline-block;
+  vertical-align: top;
+  width: 45%; /* Adjust width as needed */
+  margin: 10px;
+  box-sizing: border-box;
+  padding-top: 55px;
+}
+
+#about .text {
+  text-align: left; /* Left align the text within the block */
+}
+
+#about img {
+  max-width: 100%;
+  height: auto;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/*.About {
   padding: 110px;
   border-radius: 9px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
@@ -243,12 +292,12 @@ h2::after {
 
 .contenta {
   display: flex;
-  gap: 60px; /* Add space between the text and the image */
-  align-items: center; /* Align items vertically in the center */
+  gap: 60px; 
+  align-items: center; 
 }
 
 .image {
-  flex: 0 0 45%; /* The image takes up only the space it needs */
+  flex: 0 0 45%; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -257,8 +306,7 @@ h2::after {
 .image img {
   max-width: 100%;
   height: auto;
-}
-
+}  */
 .container {
   padding: 0 16px;
 }
@@ -606,6 +654,19 @@ hr {
   margin: 10px;
 }
 
+.fcc-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.fcc-btn:hover {
+  background-color: #0056b3;
+}
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
   .columnform,
@@ -714,12 +775,19 @@ hr {
 /* Specific media query for 768x519 dimensions */
 
 @media (max-width: 768px) {
-  .contenta {
-    flex-direction: column; /* Stacks items vertically on smaller screens */
-    justify-content: center;
-    text-align: center;
-    padding: 50px;
-    max-width: 100%;
+  #about .content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #about .text,
+  #about .image {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  #about .text {
+    padding-right: 50px;
   }
 
   .image img {
