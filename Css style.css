@@ -135,7 +135,7 @@ nav ul li {
 }
 
 section {
-  padding-top: 80px; /* Adjust this value based on your header height */
+  padding-top: 80px;
 }
 
 h4 {
@@ -206,9 +206,9 @@ h2::after {
 }
 
 .fade-in {
-  animation: fadeIn 2s ease-in-out; /* Adjust the duration as needed */
-  opacity: 0; /* Start with the header hidden */
-  animation-fill-mode: forwards; /* Keep the final state after animation */
+  animation: fadeIn 2s ease-in-out;
+  opacity: 0;
+  animation-fill-mode: forwards;
 }
 
 @keyframes fadeIn {
@@ -233,26 +233,27 @@ h2::after {
 }
 
 #about .content {
-  text-align: center; /* Center align the content */
+  text-align: center;
 }
 
 #about .text,
 #about .image {
   display: inline-block;
   vertical-align: top;
-  width: 45%; /* Adjust width as needed */
+  width: 45%;
   margin: 10px;
   box-sizing: border-box;
   padding-top: 55px;
 }
 
 #about .text {
-  text-align: left; /* Left align the text within the block */
+  text-align: left;
 }
 
 #about img {
   max-width: 100%;
   height: auto;
+  margin-top: -10%;
 }
 
 .btn {
@@ -269,44 +270,6 @@ h2::after {
   background-color: #0056b3;
 }
 
-/*.About {
-  padding: 110px;
-  border-radius: 9px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  color: black;
-  padding-top: 5px;
-
-  margin: 50px auto;
-  max-width: 1200px;
-}
-
-.information {
-  padding: 0px;
-  width: 400px;
-  height: 400px;
-  text-align: justify;
-  margin-bottom: 50px;
-  margin-top: -3px;
-  box-sizing: border-box;
-}
-
-.contenta {
-  display: flex;
-  gap: 60px; 
-  align-items: center; 
-}
-
-.image {
-  flex: 0 0 45%; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.image img {
-  max-width: 100%;
-  height: auto;
-}  */
 .container {
   padding: 0 16px;
 }
@@ -428,31 +391,6 @@ ul {
   transform: scale(1.1);
 }
 
-/* Float four columns side by side */
-.column {
-  float: left;
-  width: 33.33%;
-  padding: 0 10px;
-}
-
-/* Remove extra left and right margins, due to padding */
-
-/* Responsive columns */
-@media screen and (max-width: 600px) {
-  .column {
-    width: 150%;
-
-    margin-bottom: 20px;
-  }
-
-  .row {
-    float: left;
-    position: relative;
-    right: 35px;
-    width: 90%;
-  }
-}
-
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   transform: scale(1.1);
@@ -570,7 +508,6 @@ button[type="submit"]:hover {
   padding: 20px;
 }
 
-/* Clear floats after the columns */
 .row:after {
   content: "";
   display: table;
@@ -667,7 +604,7 @@ hr {
 .fcc-btn:hover {
   background-color: #0056b3;
 }
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+
 @media screen and (max-width: 600px) {
   .columnform,
   input[type="submit"] {
@@ -707,7 +644,7 @@ hr {
   }
 
   section {
-    padding-top: 20px; /* Adjust this value based on your header height */
+    padding-top: 20px;
   }
 }
 
@@ -772,8 +709,6 @@ hr {
   }
 }
 
-/* Specific media query for 768x519 dimensions */
-
 @media (max-width: 768px) {
   #about .content {
     flex-direction: column;
@@ -791,8 +726,7 @@ hr {
   }
 
   .image img {
-    margin-top: 10px;
-    display: none; /* Adds some space between text and image */
+    display: none;
   }
 
   .socials {
