@@ -135,7 +135,7 @@ nav ul li {
 }
 
 section {
-  padding-top: 80px; /* Adjust this value based on your header height */
+  padding-top: 80px;
 }
 
 h4 {
@@ -206,9 +206,9 @@ h2::after {
 }
 
 .fade-in {
-  animation: fadeIn 2s ease-in-out; /* Adjust the duration as needed */
-  opacity: 0; /* Start with the header hidden */
-  animation-fill-mode: forwards; /* Keep the final state after animation */
+  animation: fadeIn 2s ease-in-out;
+  opacity: 0;
+  animation-fill-mode: forwards;
 }
 
 @keyframes fadeIn {
@@ -220,8 +220,9 @@ h2::after {
   }
 }
 
-.About {
-  padding: 110px;
+/* About section*/
+
+#about {
   border-radius: 9px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   color: black;
@@ -231,31 +232,42 @@ h2::after {
   max-width: 1200px;
 }
 
-.information {
-  padding: 0px;
-  width: 400px;
-  height: 400px;
-  text-align: justify;
-  margin-bottom: 50px;
-  margin-top: -3px;
+#about .content {
+  text-align: center;
 }
 
-.contenta {
-  display: flex;
-  gap: 60px; /* Add space between the text and the image */
-  align-items: center; /* Align items vertically in the center */
+#about .text,
+#about .image {
+  display: inline-block;
+  vertical-align: top;
+  width: 45%;
+  margin: 10px;
+  box-sizing: border-box;
+  padding-top: 55px;
 }
 
-.image {
-  flex: 0 0 45%; /* The image takes up only the space it needs */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#about .text {
+  text-align: left;
 }
 
-.image img {
+#about img {
   max-width: 100%;
   height: auto;
+  margin-top: -10%;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: #0056b3;
 }
 
 .container {
@@ -325,29 +337,58 @@ ul {
 }
 
 /*portfolio page style*/
-/* Float four columns side by side */
-.column {
-  float: left;
-  width: 33.33%;
-  padding: 0 10px;
+.projects {
+  background-color: var(--bg-color);
+  padding: 32px 0;
+  margin-top: 2rem;
 }
 
-/* Remove extra left and right margins, due to padding */
+.project-pic {
+  width: 65%;
+  height: 60%;
+}
 
-/* Responsive columns */
-@media screen and (max-width: 600px) {
-  .column {
-    width: 150%;
+.projects-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-    margin-bottom: 20px;
-  }
+.projects-title {
+  font-size: 40px;
+  text-align: left;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+  margin-left: 70px;
+}
 
-  .row {
-    float: left;
-    position: relative;
-    right: 35px;
-    width: 90%;
-  }
+.project-container {
+  text-align: center;
+  width: 21.875rem;
+  padding: 1rem;
+}
+
+.project-container p {
+  padding: 0.4rem;
+}
+
+.project-title {
+  margin-bottom: var(--bottom-margin);
+}
+
+.project-details {
+  margin-bottom: var(--bottom-margin);
+}
+
+.project-card {
+  transition: 0.4s;
+  transition: transform 0.2s;
+}
+
+.project-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
 }
 
 .card:hover {
@@ -467,7 +508,6 @@ button[type="submit"]:hover {
   padding: 20px;
 }
 
-/* Clear floats after the columns */
 .row:after {
   content: "";
   display: table;
@@ -543,7 +583,28 @@ hr {
   border-color: rgba(255, 255, 255, 0.6);
 }
 
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+.project-card {
+  background-color: #fff;
+  border-radius: 11px;
+  box-shadow: 0 3px 10px var(--primary-shadow);
+  padding: 20px;
+  margin: 10px;
+}
+
+.fcc-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.fcc-btn:hover {
+  background-color: #0056b3;
+}
+
 @media screen and (max-width: 600px) {
   .columnform,
   input[type="submit"] {
@@ -583,7 +644,7 @@ hr {
   }
 
   section {
-    padding-top: 20px; /* Adjust this value based on your header height */
+    padding-top: 20px;
   }
 }
 
@@ -621,36 +682,51 @@ hr {
     height: 5.25rem;
   }
 
+  .information {
+    margin-top: 1rem;
+    padding: 1rem 3.5rem;
+  }
+
+  .information h4 {
+    text-align: center;
+  }
+
+  .information p {
+    text-align: justify;
+  }
+
   .header-text {
     text-align: center;
     padding: 40px;
   }
+
+  .projects-container {
+    flex-direction: column;
+  }
+
+  .project-container {
+    width: 20.875rem;
+  }
 }
 
-/* Specific media query for 768x519 dimensions */
-
 @media (max-width: 768px) {
-  .contenta {
-    flex-direction: row; /* Stacks items vertically on smaller screens */
-    justify-content: center;
-    text-align: center;
-    padding: 80px;
+  #about .content {
+    flex-direction: column;
+    align-items: center;
   }
 
-  .information {
-    padding: 80px;
-
-    height: 150%;
-    text-align: center;
+  #about .text,
+  #about .image {
+    width: 100%;
+    margin: 10px 0;
   }
 
-  .information.p {
-    font-size: 10pt;
+  #about .text {
+    padding-right: 50px;
   }
 
   .image img {
-    margin-top: 10px;
-    display: none; /* Adds some space between text and image */
+    display: none;
   }
 
   .socials {
@@ -682,5 +758,20 @@ hr {
 
   .footer-nav a {
     margin: 5px 0;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .hero img {
+    height: 37.5rem;
+    width: 23rem;
+  }
+
+  .bio {
+    width: 18.3rem;
+  }
+
+  .project-container {
+    width: 17.875rem;
   }
 }
