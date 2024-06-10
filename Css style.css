@@ -51,7 +51,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.9rem 3.5rem;
+  padding: 0.6rem 3.5rem;
   background-color: var(--bg-color);
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
@@ -651,7 +651,7 @@ hr {
 @media screen and (max-width: 720px) {
   /*changes reflects on screen with a width of 720px and below*/
   nav {
-    padding: 1.5rem 1rem;
+    padding: 0.5rem 1rem;
   }
   nav ul {
     position: fixed;
@@ -759,6 +759,11 @@ hr {
   .footer-nav a {
     margin: 5px 0;
   }
+
+  .socials {
+    width: 40px; /* Larger size for smaller screens */
+    height: 40px; /* Larger size for smaller screens */
+  }
 }
 
 @media screen and (max-width: 420px) {
@@ -773,5 +778,12 @@ hr {
 
   .project-container {
     width: 17.875rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .icon {
+    width: 4.475rem;
+    height: 4.45rem;
   }
 }
