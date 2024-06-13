@@ -761,12 +761,16 @@ hr {
   }
 
   .socials {
-    width: 40px; /* Larger size for smaller screens */
-    height: 40px; /* Larger size for smaller screens */
+    width: 50px; /* Larger size for smaller screens */
+    height: 50px; /* Larger size for smaller screens */
   }
 }
 
 @media screen and (max-width: 420px) {
+  .header-text h1 {
+    line-height: 1;
+  }
+
   .hero img {
     height: 37.5rem;
     width: 23rem;
