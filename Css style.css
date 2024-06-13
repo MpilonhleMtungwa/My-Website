@@ -759,11 +759,6 @@ hr {
   .footer-nav a {
     margin: 5px 0;
   }
-
-  .socials {
-    width: 50px; /* Larger size for smaller screens */
-    height: 50px; /* Larger size for smaller screens */
-  }
 }
 
 @media screen and (max-width: 420px) {
