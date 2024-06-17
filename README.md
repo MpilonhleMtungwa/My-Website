@@ -1,3 +1,3 @@
 # portfolio website
 
-My portfolio website that i created with HTML, CSS and vanilia JavaScipt
+My portfolio website that i created with HTML, CSS and vanilla JavaScipt
