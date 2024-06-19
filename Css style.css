@@ -56,6 +56,15 @@ nav {
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
 
+.navbarsocials {
+  display: flex;
+  align-items: center;
+}
+
+.socialsnav {
+  display: none;
+}
+
 nav h1 {
   color: var(--primary-color);
 }
@@ -753,11 +762,20 @@ hr {
   }
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 425px) {
   .header-text h1 {
     line-height: 1;
   }
 
+  .socialsnav {
+    display: flex;
+    gap: 0.3rem;
+    margin-left: 10px;
+  }
+
+  .socials {
+    display: none;
+  }
   .hero img {
     height: 37.5rem;
     width: 23rem;
