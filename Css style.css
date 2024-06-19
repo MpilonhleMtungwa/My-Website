@@ -519,7 +519,7 @@ button[type="submit"]:hover {
   flex-direction: column;
   position: fixed;
   right: 1%;
-  bottom: 40%;
+  bottom: 50%;
 }
 
 .socicon {
@@ -727,14 +727,6 @@ hr {
 
   .image img {
     display: none;
-  }
-
-  .socials {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    right: 5%;
-    bottom: 50%;
   }
 
   .containercontact {
