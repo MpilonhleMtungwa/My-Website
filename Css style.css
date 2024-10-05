@@ -29,6 +29,19 @@ body {
   margin: 0;
   font-family: "Roboto", sans-serif;
 }
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  opacity: 0;
+  transform: scale(0);
+  transition: transform 1s, opacity 1s;
+}
+
+.active .box {
+  transform: scale(1);
+  opacity: 1;
+}
 
 ul {
   list-style-type: none;
@@ -302,40 +315,59 @@ ul {
 }
 
 /* Skills section */
-.skills {
-  max-width: 68.75rem;
-  margin: auto;
-  text-align: center;
-  margin-top: 2.5rem;
-}
-
-.skill-header {
-  margin-bottom: 1rem;
-}
-
-.skills-wrapper img {
-  padding: 1.25rem;
-}
-
-.icon {
-  width: 11.875rem;
-  height: 11.25rem;
+.skills-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  justify-items: center;
+  align-items: center;
+  padding: 20px;
 }
 
 .icon-card {
+  width: 130px;
+  height: 130px;
+  padding: 10px;
   background-color: #fff;
-  border-radius: 11px;
-  box-shadow: 0 3px 10px var(--secondary-shadow);
-  padding: 20px;
-  margin: 15px;
-  transition: transform 0.2s;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .icon-card:hover {
-  -ms-transform: scale(1.2); /* IE 9 */
-  -webkit-transform: scale(1.2); /* Safari 3-8 */
-  transform: scale(1.2);
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+
+.icon-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.skills-title {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.skills-title::after {
+  content: "";
+
+  display: block;
+
+  width: 60px;
+  height: 4px;
+  background-color: #4a00e0; /* Change this to the shade of blue you want */
+  margin: 5px auto 0;
+}
+
+.animate__pulse {
+  animation: pulseAnimation 1s infinite ease-in-out;
+}
+
 /* Skills section ends */
 .containerbar {
   width: 80%;
@@ -455,7 +487,7 @@ ul {
   text-align: left;
   margin-left: 50px;
   margin-top: 20px;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .info-item {
@@ -555,7 +587,7 @@ footer {
 
 .footer-left h3 {
   margin: 0;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .footer-left p {
