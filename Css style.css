@@ -315,6 +315,65 @@ ul {
 }
 
 /* Skills section */
+.skills-section {
+  padding: 20px;
+  text-align: center;
+}
+
+.skills-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+/* Skills Column */
+.skills-column {
+  flex: 1 1 calc(33.33% - 20px); /* 3 columns with spacing */
+  background-color: #f7f7f8;
+  padding: 15px;
+}
+
+.skills-column h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+
+.skills-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.skills-icons img {
+  width: 65px;
+  height: 65px;
+  object-fit: contain;
+}
+
+.skills-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skills-column ul li {
+  margin: 5px 0;
+}
+
+.skills-column p {
+  margin-top: 10px;
+  font-style: italic;
+}
+/*
 .skills-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -360,14 +419,14 @@ ul {
 
   width: 60px;
   height: 4px;
-  background-color: #4a00e0; /* Change this to the shade of blue you want */
+  background-color: #4a00e0; 
   margin: 5px auto 0;
 }
 
 .animate__pulse {
   animation: pulseAnimation 1s infinite ease-in-out;
 }
-
+*/
 /* Skills section ends */
 .containerbar {
   width: 80%;
@@ -777,6 +836,10 @@ hr {
   .icon {
     width: 4.975rem;
     height: 4.45rem;
+  }
+
+  .skills-column {
+    flex: 1 1 100%; /* Stack columns for small screens */
   }
 
   .footer-content {
